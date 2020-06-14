@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+body {
+background-color: white;
+}
+.mySlides {display: none;}
+img {vertical-align: middle;
+overflow: hidden;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+.title{
+	color: black;
+	font-size: 50px;
+}
+.subtitle{
+	color: yellow;
+	font-size: 25px;
+}
+#navigation{
+		background-image: url(download.png);
+		border-color: orange;
+		border-width: 3px;
+		border-style: solid;
+		color: white;
+		text-decoration: none;
+		font-size: 30px;
+        float: right;
+        margin-right: 15px;
+        padding: 3px;
+	}
+	}
+	.services{
+		text-decoration: none;
+		color: blue;
+		font-size: 25px;
+		border-color: blue;
+		border-width: 5px;
+		border-style: solid;
+		padding: 5px;
+		margin: 15px;
+	}
+	.img-text{
+		color: blue;
+		font-size: 20px;
+		font-family: all;
+		text-align: center;
+	}
+</style>
+</head>
+<body>
+
+<a align="right" href="#" style="color: orange; font-size: 40px; text-decoration: none; background-color: black; border-color: orange; border-width: 3px; border-style: solid;">homar</a>
+<a href="file:///D:/Legend_NinjaOmar/test%20website/website(Contact%20us).html" id="navigation">Contact us</a>
+<a href="file:///D:/Legend_NinjaOmar/test%20website/website(About%20us).html" id="navigation">About us</a>
+<a href="file:///D:/Legend_NinjaOmar/test%20website/website(Services).html" id="navigation">Services</a>
+<a href="file:///D:/Legend_NinjaOmar/test%20website/website.html" id="navigation">Home</a>
+<h2 align="center" class="title">Services</h2>
+<p align="center" class="subtitle"><a href="#" class="services" align="center" style="text-decoration: none; color: black; border-color: blue; border-width: 3px; border-style: solid;">Marketing</a>
+<a href="#" class="services" align="center" style="text-decoration: none; color: black; border-color: blue; border-width: 3px; border-style: solid;">Finance</a>
+<a href="#" class="services" align="center" style="text-decoration: none; color: black; border-color: blue; border-width: 3px; border-style: solid;">Advertising</a>
+</p>
+
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="ef96c0d4-b7de-4b6a-9f64-a926a505d9fb-a8cb8f8ed0e4.small.jpg" style="width:100%">
+  <div class="img-text">Marketing</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="download (2).jpg" style="width:100%">
+  <div class="img-text">Finance</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="download (3).jpg" style="width:100%">
+  <div class="img-text">Advertising</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000);
+}
+</script>
+
+</body>
+</html> 
